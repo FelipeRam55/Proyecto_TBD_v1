@@ -158,7 +158,7 @@ $eventos = ModeloProcesos::listarEventos();
                 
                 <div class="form-group">
                     <label>Nombre del Equipo</label>
-                    <input type="text" name="nombreEquipo" required placeholder="Ej. Robotech Alpha">
+                    <input type="text" name="nombreEquipo" required maxlength="30" placeholder="Ej. x8086" pattern="[A-Za-z0-9\sÁÉÍÓÚáéíóúñÑ]+" title="Solo letras, números y espacios. Máximo 30 caracteres.">
                 </div>
                 
                 <div class="form-group">
@@ -197,29 +197,29 @@ $eventos = ModeloProcesos::listarEventos();
                 
                 <div class="form-group">
                     <label>Número de Control</label>
-                    <input type="number" name="numControl" required>
+                    <input type="number" name="numControl" required min="1" step="1">
                 </div>
                 
                 <div class="form-group">
                     <label>Nombre</label>
-                    <input type="text" name="nombre" required>
+                    <input type="text" name="nombre" required maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo letras. Máx 30 caracteres.">
                 </div>
                 
                 <div class="form-group" style="display:flex; gap:10px;">
                     <div style="flex:1;">
                         <label>Ap. Paterno</label>
-                        <input type="text" name="apPat" required>
+                        <input type="text" name="apPat" required maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo letras.">
                     </div>
                     <div style="flex:1;">
                         <label>Ap. Materno</label>
-                        <input type="text" name="apMat" required>
+                        <input type="text" name="apMat" required maxlength="30" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+" title="Solo letras.">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Edad</label>
-                    <input type="number" name="edad" id="inputAge" required>
-                    <div class="age-warning" id="ageWarning">⚠️ La edad no corresponde a la categoría del equipo.</div>
+                    <input type="number" name="edad" id="inputAge" required step="1">
+                    <div class="age-warning" id="ageWarning">La edad no corresponde a la categoría del equipo.</div>
                 </div>
 
                 <div class="form-group">
